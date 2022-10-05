@@ -6,6 +6,8 @@
 #include "Analysers.h"
 #include <iostream>
 
+#include <functional>
+
 class Voting_Grid {
 public:
     Voting_Grid(/* No args constructor */);
@@ -25,6 +27,8 @@ public:
     void loadFromFile(std::string fileName);
 
     void saveToFile(std::string fileName);
+
+    void loop(function<void(Voting_District)> loopCode);
 
 private:
     Voting_District** _Districts;

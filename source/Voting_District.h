@@ -3,6 +3,8 @@
 
 class District_ID {
 public:
+    District_ID(int x = 0, int y = 0);
+
     int x();
     int y();
 
@@ -11,6 +13,8 @@ private:
     int _y_position;
 };
 
+#pragma pack(push)
+#pragma pack(1)
 class Voting_District {
 public:
     Voting_District();
@@ -23,8 +27,6 @@ public:
         double Undecided
     );
 
-    Voting_District(const Voting_District& CopyFrom);
-
 private:
     District_ID _ID;
     int _population;
@@ -32,5 +34,7 @@ private:
     double _APU_Support;
     double _Undecided;
 };
+
+#pragma pack(pop)
 
 #endif
